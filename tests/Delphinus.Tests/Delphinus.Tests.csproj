@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ApplicationIcon>Delphinus.ico</ApplicationIcon>
+    <ApplicationIcon>delphinus.ico</ApplicationIcon>
     <SonarQubeExclude>true</SonarQubeExclude>
   </PropertyGroup>
 
