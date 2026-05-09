@@ -426,4 +426,25 @@ FodyWeavers.xsd
 *.msi
 *.msix
 *.msm
-*.msp
+*.msi
+
+# Other
+/bin/
+/dbg/
+/obj/
+/packages/
+/.vs/
+/BenchmarkDotNet.Artifacts/
+**/bin/
+**/obj/
+/tests/**/TestResults
+/tests/**/.vs/
+/tests/**/coverage/
+/TestResults/
+*.DotSettings.user
+*.sln.DotSettings.user
+/coverage*/
+/.claude/
+/.codex/
+/.idea/
+
