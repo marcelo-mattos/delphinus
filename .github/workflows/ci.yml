@@ -101,6 +101,7 @@ jobs:
               --configuration Release \
               --collect:"XPlat Code Coverage" \
               --filter "FullyQualifiedName!~Benchmark"
+          done
 
       - name: Upload coverage modern
         uses: actions/upload-artifact@v4
