@@ -97,12 +97,12 @@ Before submitting a Pull Request, please make sure that:
 
 By submitting a contribution, you agree that:
 
-- Your contribution will be licensed under the **MIT License**
+- Your contribution will be licensed under the **Apache License 2.0**
 - You grant the project a perpetual, worldwide, royalty-free license to use your contribution as part of the project
 - You certify that you have the right to submit the contribution and that it does not infringe third-party rights
 
 This project does **not** require a separate CLA (Contributor License Agreement).
-The **MIT License** governs all contributions.
+The **Apache License 2.0** governs all contributions.
 
 ---
 
