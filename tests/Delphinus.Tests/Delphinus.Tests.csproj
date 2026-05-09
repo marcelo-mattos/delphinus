@@ -1,0 +1,72 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon>Delphinus.ico</ApplicationIcon>
+    <SonarQubeExclude>true</SonarQubeExclude>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>    
+    <MSBuildProjectExtensionsPath>..\..\obj\Delphinus.Tests\</MSBuildProjectExtensionsPath>
+    <OutputPath>..\..\dbg\Delphinus.Tests\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\Delphinus.Tests\</BaseIntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\dbg\Delphinus.Tests\Delphinus.Tests.xml</DocumentationFile>
+    <NoWarn>NETSDK1138;NU1701</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <MSBuildProjectExtensionsPath>..\..\obj\Delphinus.Tests\</MSBuildProjectExtensionsPath>
+    <OutputPath>..\..\bin\Delphinus.Tests\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\Delphinus.Tests\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\obj\Delphinus.Tests\</IntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\bin\Delphinus.Tests\Delphinus.Tests.xml</DocumentationFile>
+    <NoWarn>NETSDK1138;NU1701</NoWarn>
+  </PropertyGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <PackageReference Include="Faker" Version="1.2.0" />
+    <PackageReference Include="System.Formats.Asn1" Version="6.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.12.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.32" />
+    <PackageReference Include="Npgsql" Version="5.0.18" />
+  </ItemGroup>  
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Delphinus\Delphinus.csproj" />
+  </ItemGroup>  
+  
+  <ItemGroup>
+    <Compile Update="Resources\Shared.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Shared.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Shared.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Shared.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
